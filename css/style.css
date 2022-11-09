@@ -396,7 +396,7 @@ a:hover {
   background: url("../img/notebook.png") no-repeat;
   width: 630px;
   height: 630px;
-  top: -40%;
+  top: -50%;
   right: -17%;
   z-index: 2;
   -webkit-animation: appear 1s ease-out 1.8s both;
