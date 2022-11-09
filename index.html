@@ -3,30 +3,36 @@
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ru">
     <!--<![endif]-->
 <head>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge;IE=EmulateIE7;IE=EmulateIE8;IE=EmulateIE9;chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0" />
     <title>Р7-Офис. Редакторы документов</title>
     <meta name="description" content="Российский офис для российских и зарубежных операционных систем"/>
+    <meta property="og:title" content="Р7-Офис. Редакторы документов">
+    <meta property="og:description" content="Российский офис для российских и зарубежных операционных систем">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <!-- Удалить после публикации в интернет -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <!--     <link rel="stylesheet" type="text/css" href="https://static.lc-group.ru/css/jquery.fancybox.css"> -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
     <body>
         <header class="header">
-            <nav>
+            <div class="header__container">
                 <div class="wrapper">
-                    <div class="header__menu">
+                    <div class="header__content">
                         <div class="header__logo">
                             <a href="/">
                                 <img src="img/logo_r7.svg" alt="Р7-Офис">
                             </a>
                         </div>
-                        <div class="header__links">
+                        <div class="header__buttons">
                             <div class="btn btn_transparent">
                                 <a href="/">Заказать демонстрацию</a>
                             </div>
@@ -34,18 +40,43 @@
                                 <a href="/">Купить</a>
                             </div>
                         </div>
+                        <div class="menu__icon">
+                            <span></span>
+                        </div>
+                        <nav class="menu__list">
+                            <ul>
+                                <li>
+                                    <a class="menu__link" data-goto=".text-editor" href="#">Текстовый редактор</a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" data-goto=".table-editor" href="#">Редактор таблиц</a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" data-goto=".presentation-editor" href="#">Редактор презентаций</a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" data-goto=".server" href="#">Корпоративный сервер</a>
+                                </li>
+                                <li>
+                                    <a href="">Заказать демонстрацию</a>
+                                </li>
+                                <li>
+                                    <a href="">Купить</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-            </nav>
-            <div class="header__banner">
+            </div>
+            <div class="banner">
                 <div class="wrapper">
-                    <div class="header__container">
-                        <div class="header__text">
+                    <div class="banner__container">
+                        <div class="banner__text">
                             <h1>Р7-Офис. Редакторы документов</h1>
-                            <h2 class="subtitle">Российский офис для российских и зарубежных операционных систем</h2>
-                            <p>Р7-Офис - профессиональные редакторы документов, таблиц и презентаций для госучреждений и образования, готовые полностью заменить решения от Microsoft уже сегодня.</p>
+                            <h2 class="subtitle">Российский офис для&nbsp;российских и&nbsp;зарубежных операционных систем</h2>
+                            <p>Р7-Офис&nbsp;&mdash; профессиональные редакторы документов, таблиц и&nbsp;презентаций для&nbsp;госучреждений и&nbsp;образования, готовые полностью заменить решения от&nbsp;Microsoft уже&nbsp;сегодня.</p>
                         </div>
-                        <div class="header__buttons">
+                        <div class="banner__buttons">
                             <div class="btn btn_white">
                                 <a href="/">Купить</a>
                             </div>
@@ -59,58 +90,58 @@
                 <div class="wrapper">
                     <div class="features__content">
                         <div class="features__row">
-                            <div class="features__column">
+                            <div class="features__column _anim-items _anim-no-hide">
                                 <div class="features__item">
                                     <div class="features__icon">
-                                        <img src="img/icon 1.png" alt="">
+                                        <img src="img/icon 1.png" alt="Совместимость с популярными ОС">
                                     </div>
-                                    <h3>Совместимость с популярными ОС</h3>
-                                    <p>Р7-Офис совместим с операционными системами семейств Альт и Rosa Linux, Astra Linux, РЕД ОС и другими. Офисный пакет также работает с Windows (32 и 64 бита), Debian, Ubuntu и производными, дистрибутивами на базе RPM, Mac OS 10.10 или выше.</p>
+                                    <h3>Совместимость с&nbsp;популярными ОС</h3>
+                                    <p>Р7-Офис совместим с&nbsp;операционными системами семейств Альт и&nbsp;Rosa Linux, Astra Linux, РЕД ОС и&nbsp;другими. Офисный пакет также работает с&nbsp;Windows (32 и&nbsp;64 бита), Debian, Ubuntu и&nbsp;производными, дистрибутивами на&nbsp;базе RPM, Mac OS 10.10 или&nbsp;выше.</p>
                                 </div>
                             </div>
-                            <div class="features__column">
+                            <div class="features__column _anim-items _anim-no-hide">
                                 <div class="features__item">
                                     <div class="features__icon">
-                                        <img src="img/icon 2.png" alt="">
+                                        <img src="img/icon 2.png" alt="Поддержка форматов Microsoft">
                                     </div>
                                     <h3>Поддержка форматов Microsoft</h3>
-                                    <p>Р7-Офис гарантирует максимальную совместимость с Microsoft и поддерживает другие популярные форматы, включая ODF.</p>
+                                    <p>Р7-Офис гарантирует максимальную совместимость с&nbsp;Microsoft и&nbsp;поддерживает другие популярные форматы, включая ODF.</p>
                                 </div>
                             </div>
-                            <div class="features__column">
+                            <div class="features__column _anim-items _anim-no-hide">
                                 <div class="features__item">
                                     <div class="features__icon">
-                                        <img src="img/icon 3.png" alt="">
+                                        <img src="img/icon 3.png" alt="Соответствие требованиям законодательства РФ">
                                     </div>
                                     <h3>Соответствие требованиям законодательства РФ</h3>
-                                    <p>Р7-Офис полностью соответствует всем необходимым для использования в госорганах требованиям, включая Постановления Правительства РФ №1236 от 16.11.2015 и №325 от 23.03.2017. Посмотреть в реестре</p>
+                                    <p>Р7-Офис полностью соответствует всем необходимым для&nbsp;использования в&nbsp;госорганах требованиям, включая Постановления Правительства РФ №1236 от&nbsp;16.11.2015 и&nbsp;№325 от&nbsp;23.03.2017.</p>
                                 </div>
                             </div>
-                            <div class="features__column">
+                            <div class="features__column _anim-items _anim-no-hide">
                                 <div class="features__item">
                                     <div class="features__icon">
-                                        <img src="img/icon 4.png" alt="">
+                                        <img src="img/icon 4.png" alt="Удобный вкладочный интерфейс">
                                     </div>
                                     <h3>Удобный вкладочный интерфейс</h3>
-                                    <p>Вам не нужно открывать множество окон одной и той же программы: вы можете работать с текстовыми документами, таблицами и презентациями в одном окне, переключаясь между вкладками. Посмотреть скриншоты</p>
+                                    <p>Вам не&nbsp;нужно открывать множество окон одной и&nbsp;той же программы: вы можете работать с&nbsp;текстовыми документами, таблицами и&nbsp;презентациями в&nbsp;одном окне, переключаясь между вкладками.</p>
                                 </div>
                             </div>
-                            <div class="features__column">
+                            <div class="features__column _anim-items _anim-no-hide">
                                 <div class="features__item">
                                     <div class="features__icon">
-                                        <img src="img/icon 5.png" alt="">
+                                        <img src="img/icon 5.png" alt="Плагины">
                                     </div>
                                     <h3>Плагины</h3>
-                                    <p>Вы можете добавить в редакторы любые нужные вам функции, написав их самостоятельно или подключив уже существующие сервисы: Главред, Яндекс.Переводчик, редактор изображений от Adobe и другие.</p>
+                                    <p>Вы можете добавить в&nbsp;редакторы любые нужные вам функции, написав их самостоятельно или&nbsp;подключив уже существующие сервисы: Главред, Яндекс.Переводчик, редактор изображений от&nbsp;Adobe и&nbsp;другие.</p>
                                 </div>
                             </div>
-                            <div class="features__column">
+                            <div class="features__column _anim-items _anim-no-hide">
                                 <div class="features__item">
                                     <div class="features__icon">
-                                        <img src="img/icon 6.png" alt="">
+                                        <img src="img/icon 6.png" alt="Версии для госучреждений и образования">
                                     </div>
-                                    <h3>Версии для госучреждений и образования</h3>
-                                    <p>Р7-Офис - полнофункциональный офисный пакет, рекомендованный для организаций, работающих с конфиденциальной информацией. Приложение а звивается с учетом нужд госучреждений и образования и поставляется по доступным ценам. Запросить цены</p>
+                                    <h3>Версии для&nbsp;госучреждений и&nbsp;образования</h3>
+                                    <p>Р7-Офис&nbsp;&mdash; полнофункциональный офисный пакет, рекомендованный для&nbsp;организаций, работающих с&nbsp;конфиденциальной информацией. Приложение развивается с&nbsp;учетом нужд госучреждений и&nbsp;образования и&nbsp;поставляется по&nbsp;доступным ценам.</p>
                                 </div>
                             </div>
                         </div>
@@ -121,23 +152,23 @@
                 <div class="wrapper">
                     <div class="spec__title">
                         <h2 class="title">Текстовый редактор Р7-Офис</h2>
-                        <p class="subtitle">Профессиональный инструмент, готовый полностью заменить решения от Microsoft Office уже сегодня</p>
+                        <p class="subtitle">Профессиональный инструмент, готовый полностью заменить решения от&nbsp;Microsoft Office уже сегодня</p>
                     </div>
                     <div class="spec__container">
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Работа со всеми ключевыми форматами</div>
+                                <div class="spec__property">Работа со&nbsp;всеми ключевыми форматами</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Открывайте и редактируйте документы в формате:<br>DOCX, DOC, PDF, TXT, ODT, RTF, HTML, EPUB</div>
+                                <div class="spec__value">Открывайте и&nbsp;редактируйте документы в&nbsp;формате:<br>DOCX, DOC, PDF, TXT, ODT, RTF, HTML, EPUB</div>
                             </div>
                         </div>
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Удобный интерфейс для редактирования онлайн и с компьютера</div>
+                                <div class="spec__property">Удобный интерфейс для&nbsp;редактирования онлайн и&nbsp;с&nbsp;компьютера</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Пользуйтесь решением онлайн или скачивайте в ваш ПК: одинаковый интерфейс приложений поможет работать легко в любом режиме.</div>
+                                <div class="spec__value">Пользуйтесь решением онлайн или&nbsp;скачивайте в&nbsp;ваш ПК: одинаковый интерфейс приложений поможет работать легко в&nbsp;любом режиме</div>
                             </div>
                         </div>
                         <div class="spec__row">
@@ -145,7 +176,7 @@
                                 <div class="spec__property">Максимальное количество шрифтов, стилей, шаблонов</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Управляйте шрифтами, стилями и шаблонами текста, выбирая наиболее подходящие для реализации ваших целей из задач.</div>
+                                <div class="spec__value">Управляйте шрифтами, стилями и&nbsp;шаблонами текста, выбирая наиболее подходящие для&nbsp;реализации ваших целей из&nbsp;задач</div>
                             </div>
                         </div>
                         <div class="spec__row">
@@ -153,15 +184,15 @@
                                 <div class="spec__property">Эффективная совместная работа над текстами</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Используйте инструменты для плодотворной работы над текстами в команде: предлагайте свои правки, оставляйте комментарии, заводите обсуждения.</div>
+                                <div class="spec__value">Используйте инструменты для&nbsp;плодотворной работы над текстами в&nbsp;команде: предлагайте свои правки, оставляйте комментарии, заводите обсуждения</div>
                             </div>
                         </div>
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Поддержка популярных макросов и плагинов</div>
+                                <div class="spec__property">Поддержка популярных макросов и&nbsp;плагинов</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Используйте макросы (JavaScript) и популярные плагины (Редактор изображений, OCR, Переводчик и др.), чтобы автоматизировать стандартные и повторяющиеся задачи при работе с текстами.</div>
+                                <div class="spec__value">Используйте макросы (JavaScript) и&nbsp;популярные плагины (Редактор изображений, OCR, Переводчик и&nbsp;др.), чтобы автоматизировать стандартные и&nbsp;повторяющиеся задачи при&nbsp;работе с&nbsp;текстами</div>
                             </div>
                         </div>
                         <div class="spec__row">
@@ -169,7 +200,7 @@
                                 <div class="spec__property">Удобное форматирование текстов</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Наведите порядок в текстах документов, создавая многоуровневые нумерованные или маркированные списки, нумерации страниц.</div>
+                                <div class="spec__value">Наведите порядок в&nbsp;текстах документов, создавая многоуровневые нумерованные или&nbsp;маркированные списки, нумерации страниц</div>
                             </div>
                         </div>
                         <div class="spec__row">
@@ -177,7 +208,7 @@
                                 <div class="spec__property">Быстрое сравнение документов</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Открывайте и сравнивайте два документа, чтобы увидеть отличия между ними. При необходимости – принимайте или отклоняйте предложенные изменения и сохраняйте в новую или отдельную версию документа.</div>
+                                <div class="spec__value">Открывайте и&nbsp;сравнивайте два документа, чтобы увидеть отличия между ними. При необходимости – принимайте или&nbsp;отклоняйте предложенные изменения и&nbsp;сохраняйте в&nbsp;новую или&nbsp;отдельную версию документа</div>
                             </div>
                         </div>
                         <div class="spec__row">
@@ -185,7 +216,7 @@
                                 <div class="spec__property">Добавление любых вспомогательных элементов</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Вставляйте в текстовые файлы необходимые ссылки, таблицы, диаграммы автофигуры, формулы и текстовые объекты.</div>
+                                <div class="spec__value">Вставляйте в&nbsp;текстовые файлы необходимые ссылки, таблицы, диаграммы автофигуры, формулы и&nbsp;текстовые объекты</div>
                             </div>
                         </div>
                     </div>
@@ -200,63 +231,63 @@
                 <div class="wrapper">
                     <div class="spec__title">
                         <h2 class="title">Редактор таблиц Р7-Офис</h2>
-                        <p class="subtitle">Профессиональный инструмент, готовый полностью заменить решения от Microsoft Office уже сегодня</p>
+                        <p class="subtitle">Профессиональный инструмент, готовый полностью заменить решения от&nbsp;Microsoft Office уже сегодня</p>
                     </div>
                     <div class="spec__container">
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Использование редактора таблиц для автоматизации вычислений, организации и анализа данных</div>
+                                <div class="spec__property">Использование редактора таблиц для&nbsp;автоматизации вычислений, организации и&nbsp;анализа данных</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Открывайте и редактируйте таблицы в формате XLS, XLSX, ODS, CSV и сохраняйте их в PDF</div>
-                            </div>
-                        </div>
-                        <div class="spec__row">
-                            <div class="spec__column">
-                                <div class="spec__property">Удобный интерфейс для редактирования онлайн и с компьютера</div>
-                            </div>
-                            <div class="spec__column">
-                                <div class="spec__value">Пользуйтесь решением онлайн или скачивайте в ваш ПК: одинаковый интерфейс приложений поможет работать легко в любом режиме.</div>
+                                <div class="spec__value">Открывайте и&nbsp;редактируйте таблицы в&nbsp;формате XLS, XLSX, ODS, CSV и&nbsp;сохраняйте их в&nbsp;PDF</div>
                             </div>
                         </div>
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Максимальное количество функций и формул</div>
+                                <div class="spec__property">Удобный интерфейс для&nbsp;редактирования онлайн и&nbsp;с&nbsp;компьютера</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Используйте более 440 встроенных функций и формул: финансовые, статистические, информационно-технологические, инженерные, математические, поисковые и пр. для реализации ваших целей из задач.</div>
-                            </div>
-                        </div>
-                        <div class="spec__row">
-                            <div class="spec__column">
-                                <div class="spec__property">Эффективная совместная работа с таблицами</div>
-                            </div>
-                            <div class="spec__column">
-                                <div class="spec__value">Используйте инструменты для плодотворной работы с таблицами в команде: предлагайте свои правки, оставляйте комментарии, заводите обсуждения</div>
+                                <div class="spec__value">Пользуйтесь решением онлайн или&nbsp;скачивайте в&nbsp;ваш ПК: одинаковый интерфейс приложений поможет работать легко в&nbsp;любом режиме</div>
                             </div>
                         </div>
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Поддержка популярных макросов и плагинов</div>
+                                <div class="spec__property">Максимальное количество функций и&nbsp;формул</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Используйте макросы (JavaScript) и популярные плагины (Редактор изображений, Переводчик и др.), чтобы автоматизировать стандартные и повторяющиеся задачи при работе с таблицами.</div>
-                            </div>
-                        </div>
-                        <div class="spec__row">
-                            <div class="spec__column">
-                                <div class="spec__property">Быстрый анализ и фильтрация данных</div>
-                            </div>
-                            <div class="spec__column">
-                                <div class="spec__value">Сортируйте и фильтруйте данные, сохраняя шаблоны таблиц, которые в будущем ускорят вашу текущую работу в разы.</div>
+                                <div class="spec__value">Используйте более 440 встроенных функций и&nbsp;формул: финансовые, статистические, информационно-технологические, инженерные, математические, поисковые и&nbsp;пр. для&nbsp;реализации ваших целей из&nbsp;задач</div>
                             </div>
                         </div>
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Точные расчеты легко и быстро</div>
+                                <div class="spec__property">Эффективная совместная работа с&nbsp;таблицами</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Используйте именованные диапазоны и изменяйте формат представления чисел, чтобы упростить работу с таблицами и быстро обнаруживать нужный контент.</div>
+                                <div class="spec__value">Используйте инструменты для&nbsp;плодотворной работы с&nbsp;таблицами в&nbsp;команде: предлагайте свои правки, оставляйте комментарии, заводите обсуждения</div>
+                            </div>
+                        </div>
+                        <div class="spec__row">
+                            <div class="spec__column">
+                                <div class="spec__property">Поддержка популярных макросов и&nbsp;плагинов</div>
+                            </div>
+                            <div class="spec__column">
+                                <div class="spec__value">Используйте макросы (JavaScript) и&nbsp;популярные плагины (Редактор изображений, Переводчик и&nbsp;др.), чтобы автоматизировать стандартные и&nbsp;повторяющиеся задачи при&nbsp;работе с&nbsp;таблицами</div>
+                            </div>
+                        </div>
+                        <div class="spec__row">
+                            <div class="spec__column">
+                                <div class="spec__property">Быстрый анализ и&nbsp;фильтрация данных</div>
+                            </div>
+                            <div class="spec__column">
+                                <div class="spec__value">Сортируйте и&nbsp;фильтруйте данные, сохраняя шаблоны таблиц, которые в&nbsp;будущем ускорят вашу текущую работу в&nbsp;разы</div>
+                            </div>
+                        </div>
+                        <div class="spec__row">
+                            <div class="spec__column">
+                                <div class="spec__property">Точные расчеты легко и&nbsp;быстро</div>
+                            </div>
+                            <div class="spec__column">
+                                <div class="spec__value">Используйте именованные диапазоны и&nbsp;изменяйте формат представления чисел, чтобы упростить работу с&nbsp;таблицами и&nbsp;быстро обнаруживать нужный контент</div>
                             </div>
                         </div>
                         <div class="spec__row">
@@ -264,7 +295,7 @@
                                 <div class="spec__property">Добавление любых вспомогательных элементов</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Вставляйте любые необходимые изображения, ссылки, автофигуры, текстовые объекты, классические и 3D-диаграммы.</div>
+                                <div class="spec__value">Вставляйте любые необходимые изображения, ссылки, автофигуры, текстовые объекты, классические и&nbsp;3D-диаграммы</div>
                             </div>
                         </div>
                     </div>
@@ -278,64 +309,56 @@
             <section class="spec__section presentation-editor">
                 <div class="wrapper">
                     <div class="spec__title">
-                        <h2 class="title">Редактор таблиц Р7-Офис</h2>
-                        <p class="subtitle">Профессиональный инструмент, готовый полностью заменить решения от Microsoft Office уже сегодня</p>
+                        <h2 class="title">Редактор презентаций Р7-Офис</h2>
+                        <p class="subtitle">Профессиональный инструмент, готовый полностью заменить решения от&nbsp;Microsoft Office уже сегодня</p>
                     </div>
                     <div class="spec__container">
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Использование редактора таблиц для автоматизации вычислений, организации и анализа данных</div>
+                                <div class="spec__property">Создание ярких демонстрационных материалов</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Открывайте и редактируйте таблицы в формате XLS, XLSX, ODS, CSV и сохраняйте их в PDF</div>
-                            </div>
-                        </div>
-                        <div class="spec__row">
-                            <div class="spec__column">
-                                <div class="spec__property">Удобный интерфейс для редактирования онлайн и с компьютера</div>
-                            </div>
-                            <div class="spec__column">
-                                <div class="spec__value">Пользуйтесь решением онлайн или скачивайте в ваш ПК: одинаковый интерфейс приложений поможет работать легко в любом режиме.</div>
+                                <div class="spec__value">Просматривайте и&nbsp;редактируйте презентации в&nbsp;формате PPTX, PPT, ODP.</div>
                             </div>
                         </div>
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Максимальное количество функций и формул</div>
+                                <div class="spec__property">Удобный интерфейс для&nbsp;редактирования онлайн и&nbsp;с компьютера</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Используйте более 440 встроенных функций и формул: финансовые, статистические, информационно-технологические, инженерные, математические, поисковые и пр. для реализации ваших целей из задач.</div>
-                            </div>
-                        </div>
-                        <div class="spec__row">
-                            <div class="spec__column">
-                                <div class="spec__property">Эффективная совместная работа с таблицами</div>
-                            </div>
-                            <div class="spec__column">
-                                <div class="spec__value">Используйте инструменты для плодотворной работы с таблицами в команде: предлагайте свои правки, оставляйте комментарии, заводите обсуждения</div>
+                                <div class="spec__value">Пользуйтесь решением онлайн или&nbsp;скачивайте в&nbsp;ваш ПК: одинаковый интерфейс приложений поможет работать легко в&nbsp;любом режиме</div>
                             </div>
                         </div>
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Поддержка популярных макросов и плагинов</div>
+                                <div class="spec__property">Удобная настройка показа слайдов и&nbsp;переходов</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Используйте макросы (JavaScript) и популярные плагины (Редактор изображений, Переводчик и др.), чтобы автоматизировать стандартные и повторяющиеся задачи при работе с таблицами.</div>
-                            </div>
-                        </div>
-                        <div class="spec__row">
-                            <div class="spec__column">
-                                <div class="spec__property">Быстрый анализ и фильтрация данных</div>
-                            </div>
-                            <div class="spec__column">
-                                <div class="spec__value">Сортируйте и фильтруйте данные, сохраняя шаблоны таблиц, которые в будущем ускорят вашу текущую работу в разы.</div>
+                                <div class="spec__value">Создавайте современные интерактивные презентации с&nbsp;помощью готовых переходов и&nbsp;правильно настроенного режима показа слайдов</div>
                             </div>
                         </div>
                         <div class="spec__row">
                             <div class="spec__column">
-                                <div class="spec__property">Точные расчеты легко и быстро</div>
+                                <div class="spec__property">Эффективная совместная работа с&nbsp;презентациями</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Используйте именованные диапазоны и изменяйте формат представления чисел, чтобы упростить работу с таблицами и быстро обнаруживать нужный контент.</div>
+                                <div class="spec__value">Используйте инструменты для&nbsp;плодотворной работы с&nbsp;презентациями в&nbsp;команде: предлагайте свои правки, оставляйте комментарии, заводите обсуждения.</div>
+                            </div>
+                        </div>
+                        <div class="spec__row">
+                            <div class="spec__column">
+                                <div class="spec__property">Поддержка популярных макросов и&nbsp;плагинов</div>
+                            </div>
+                            <div class="spec__column">
+                                <div class="spec__value">Используйте макросы (JavaScript) и&nbsp;популярные плагины (Редактор изображений, Переводчик и&nbsp;др.), чтобы автоматизировать стандартные и&nbsp;повторяющиеся задачи при&nbsp;работе с&nbsp;презентациями</div>
+                            </div>
+                        </div>
+                        <div class="spec__row">
+                            <div class="spec__column">
+                                <div class="spec__property">Комфортный режим докладчика и&nbsp;заметок</div>
+                            </div>
+                            <div class="spec__column">
+                                <div class="spec__value">Проводите яркие презентации, используя режим докладчика и&nbsp;заранее прописывая в&nbsp;закладках важные мысли, цифры и&nbsp;факты для&nbsp;вашей речи</div>
                             </div>
                         </div>
                         <div class="spec__row">
@@ -343,7 +366,15 @@
                                 <div class="spec__property">Добавление любых вспомогательных элементов</div>
                             </div>
                             <div class="spec__column">
-                                <div class="spec__value">Вставляйте любые необходимые изображения, ссылки, автофигуры, текстовые объекты, классические и 3D-диаграммы.</div>
+                                <div class="spec__value">Вставляйте любые необходимые изображения, автофигуры, диаграммы и&nbsp;переходы, чтобы визуально украсить ваши слайды</div>
+                            </div>
+                        </div>
+                        <div class="spec__row">
+                            <div class="spec__column">
+                                <div class="spec__property">Удобное структурирование текста на слайдах</div>
+                            </div>
+                            <div class="spec__column">
+                                <div class="spec__value">Наведите порядок в&nbsp;текстах слайдов: форматируйте таблицы и&nbsp;создавайте многоуровневые нумерованные или&nbsp;маркированные списки</div>
                             </div>
                         </div>
                     </div>
@@ -358,7 +389,7 @@
                 <div class="wrapper">
                     <div class="server__title">
                         <h2 class="title">Корпоративный сервер Р7-Офис</h2>
-                        <p class="subtitle">Управление документами, редакторы, почта, календарь и корпоративная соцсеть для бизнеса, госорганов и учреждений образования</p>
+                        <p class="subtitle">Управление документами, редакторы, почта, календарь и&nbsp;корпоративная соцсеть для&nbsp;бизнеса, госорганов и&nbsp;учреждений образования</p>
                     </div>
                     <div class="server__container">
                         <div class="server__row">
@@ -370,11 +401,11 @@
                                     <div class="server__text">
                                         <div class="server__property">Профессиональный онлайн-редактор текстовых документов</div>
                                         <div class="server__property">Мощный онлайн-редактор электронных таблиц</div>
-                                        <div class="server__property">Редактор для создания презентаций онлайн</div>
-                                        <div class="server__property">Совместимость с форматами MS Office и OpenDocument</div>
-                                        <div class="server__property">Два режима совместного редактирования в реальном времени</div>
+                                        <div class="server__property">Редактор для&nbsp;создания презентаций онлайн</div>
+                                        <div class="server__property">Совместимость с&nbsp;форматами MS Office и&nbsp;OpenDocument</div>
+                                        <div class="server__property">Два режима совместного редактирования в&nbsp;реальном времени</div>
                                         <div class="server__property">Рецензирование, комментарии, чат</div>
-                                        <div class="server__property">Встроенные дополнения: переводчик, редактор изображений, OCR и другие</div>
+                                        <div class="server__property">Встроенные дополнения: переводчик, редактор изображений, OCR и&nbsp;другие</div>
                                     </div>
                                 </div>
                             </div>
@@ -385,12 +416,12 @@
                                     </div>
                                     <div class="server__text">
                                         <div class="server__property">Структурированное хранение документации</div>
-                                        <div class="server__property">Предоставление доступа для отдельных пользователей или целых отделов</div>
+                                        <div class="server__property">Предоставление доступа для&nbsp;отдельных пользователей или&nbsp;целых отделов</div>
                                         <div class="server__property">Разграничение прав доступа: чтение, рецензирование, редактирование</div>
-                                        <div class="server__property">Предоставление доступа по внешней ссылке</div>
-                                        <div class="server__property">Управление версиями и ревизиями</div>
-                                        <div class="server__property">Встраивание документов в веб-страницы</div>
-                                        <div class="server__property">Тесная интеграция с почтой</div>
+                                        <div class="server__property">Предоставление доступа по&nbsp;внешней ссылке</div>
+                                        <div class="server__property">Управление версиями и&nbsp;ревизиями</div>
+                                        <div class="server__property">Встраивание документов в&nbsp;веб-страницы</div>
+                                        <div class="server__property">Тесная интеграция с&nbsp;почтой</div>
                                     </div>
                                 </div>
                             </div>
@@ -403,12 +434,12 @@
                                     </div>
                                     <div class="server__text">
                                         <div class="server__property">Почтовый сервер</div>
-                                        <div class="server__property">Создание корпоративных адресов в своем домене</div>
-                                        <div class="server__property">Агрегатор для сбора почты с разных акаунтов</div>
-                                        <div class="server__property">Сортировка корреспонденции с помощью тэгов</div>
-                                        <div class="server__property">Адресная книга и автоответчик</div>
-                                        <div class="server__property">Интеграция с календарем и системой документооборота</div>
-                                        <div class="server__property">Быстрый просмотр и сохранение прикрепленных файлов для редактирования</div>
+                                        <div class="server__property">Создание корпоративных адресов в&nbsp;своем домене</div>
+                                        <div class="server__property">Агрегатор для&nbsp;сбора почты с&nbsp;разных акаунтов</div>
+                                        <div class="server__property">Сортировка корреспонденции с&nbsp;помощью тэгов</div>
+                                        <div class="server__property">Адресная книга и&nbsp;автоответчик</div>
+                                        <div class="server__property">Интеграция с&nbsp;календарем и&nbsp;системой документооборота</div>
+                                        <div class="server__property">Быстрый просмотр и&nbsp;сохранение прикрепленных файлов для&nbsp;редактирования</div>
                                     </div>
                                 </div>
                             </div>
@@ -418,13 +449,13 @@
                                         Календарь
                                     </div>
                                     <div class="server__text">
-                                        <div class="server__property">Персональные и групповые календари</div>
-                                        <div class="server__property">Просмотр по дням, неделям, месяцам, за выбранный период</div>
-                                        <div class="server__property">Отображение в виде календаря или списка</div>
+                                        <div class="server__property">Персональные и&nbsp;групповые календари</div>
+                                        <div class="server__property">Просмотр по&nbsp;дням, неделям, месяцам, за выбранный период</div>
+                                        <div class="server__property">Отображение в&nbsp;виде календаря или&nbsp;списка</div>
                                         <div class="server__property">Совместный доступ к календарям</div>
                                         <div class="server__property">Создание/редактирование событий, рассылка приглашений, напоминания</div>
-                                        <div class="server__property">Синхронизация со сторонними календарями</div>
-                                        <div class="server__property">Интеграция с почтой и автодобавление событий</div>
+                                        <div class="server__property">Синхронизация со&nbsp;сторонними календарями</div>
+                                        <div class="server__property">Интеграция с&nbsp;почтой и&nbsp;автодобавление событий</div>
                                     </div>
                                 </div>
                             </div>
@@ -452,13 +483,13 @@
                                         Панель управления
                                     </div>
                                     <div class="server__text">
-                                        <div class="server__property">Автоматизированное управление системой Р7-Офис на вашем сервере</div>
+                                        <div class="server__property">Автоматизированное управление системой Р7-Офис на&nbsp;вашем сервере</div>
                                         <div class="server__property">Резервное копирование данных</div>
-                                        <div class="server__property">Централизация доступа с помощью LDAP</div>
-                                        <div class="server__property">Настройка параметров входа в систему</div>
+                                        <div class="server__property">Централизация доступа с&nbsp;помощью LDAP</div>
+                                        <div class="server__property">Настройка параметров входа в&nbsp;систему</div>
                                         <div class="server__property">Поддержка двухфакторной аутентификации</div>
                                         <div class="server__property">Использование технологии Единого входа (SSO)</div>
-                                        <div class="server__property">Отслеживание входов в систему и других действий пользователей</div>
+                                        <div class="server__property">Отслеживание входов в&nbsp;систему и&nbsp;других действий пользователей</div>
                                     </div>
                                 </div>
                             </div>
@@ -473,40 +504,26 @@
                         <div class="footer__content">
                             <div class="footer__logo">
                                 <a href="/">
-                                    <img src="img/logo_merlion.svg" alt="">
+                                    <img src="img/logo_merlion.svg" alt="МЕРЛИОН импортозамещение">
                                 </a>
                             </div>
                             <div class="footer__text">
-                                <h5>MERLION Официальный дистрибьютор с ноября 2019 года</h5>
-                                <p><span>Более 130 реализованных проектов</span>среди них внедрения в крупнейшие российские компании.</p>
+                                <h5>MERLION Официальный дистрибьютор с&nbsp;ноября 2019 года</h5>
+                                <p><span>Более 130 реализованных проектов</span>среди них внедрения в&nbsp;крупнейшие российские компании.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-<!--         <footer class="footer">
-            <div class="wrapper">
-                <div class="footer__content">
-                    <div class="footer__logo">
-                        <a href="/">
-                            <img src="img/logo_merlion.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="footer__text">
-                        <h5>MERLION Официальный дистрибьютор с ноября 2019 года</h5>
-                        <p><span>Более 130 реализованных проектов</span>среди них внедрения в крупнейшие российские компании.</p>
-                    </div>
-                </div>
-            </div>
-        </footer> -->
+
         <script type="text/javascript" src="https://static.lc-group.ru/framework/jquery-3.5.0/jquery-3.5.0.min.js" /></script>
-        <script type="text/javascript" src="https://static.lc-group.ru/js/slick-1.8.1/slick.min.js"></script>
-        <script type="text/javascript" src="https://static.lc-group.ru/js/jquery.fancybox.min.js"></script>
-        <script type="text/javascript" src="js/common.js" /></script>
-        <script type="text/javascript" src="js/request.js?<?=rand(0,9999)?>"></script>
+<!--         <script type="text/javascript" src="https://static.lc-group.ru/js/slick-1.8.1/slick.min.js"></script> -->
+<!--         <script type="text/javascript" src="https://static.lc-group.ru/js/jquery.fancybox.min.js"></script> -->
+        <script type="text/javascript" src="js/common.js"></script>
+<!--         <script type="text/javascript" src="js/request.js?<?=rand(0,9999)?>"></script>
         <script type="text/javascript" src="js/validate_promo.js"></script>
-        <script sync type='text/javascript' src='https://static.lc-group.ru/js/privacyPolicy.js'></script>
+        <script sync type='text/javascript' src='https://static.lc-group.ru/js/privacyPolicy.js'></script> -->
             <!--[if lt IE 9]>
                 <script src="libs/html5shiv/es5-shim.min.js"></script>
                 <script src="libs/html5shiv/html5shiv.min.js"></script>
