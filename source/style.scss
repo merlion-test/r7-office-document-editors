@@ -31,7 +31,7 @@ html, body{
 }
 
 body{
-	line-height: 130%;
+	line-height: 1.3;
 	font-size: 1.125rem;
 	font-weight: 400;
 	&._lock{
@@ -454,7 +454,7 @@ a{
 			margin: 0 0 15px 0;
 		}
 		p{
-			line-height: 150%;
+			line-height: 1.5;
 		}
 	}
 	&__icon{
