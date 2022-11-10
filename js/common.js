@@ -77,3 +77,30 @@ if (animItems.length > 0) {
 		animOnScroll();
 	}, 300);
 }
+
+// Кнопка вверх
+
+function showButtonUp() {
+	let btnUp = document.querySelector('.btn-up');
+	if (window.pageYOffset > 1000) {
+		btnUp.style.opacity = '.7';
+	} else {
+		btnUp.style.opacity = '0';
+	}
+}
+
+window.addEventListener('scroll', showButtonUp);
+
+$(function() {
+	$(window).scroll(function() {
+		if($(this).scrollTop() != 0) {
+			$('.btn-up').fadeIn();
+			} else {
+			$('.btn-up').fadeOut();
+		}
+	});
+
+	$('.btn-up').click(function() {
+		$('body,html').animate({scrollTop:1},800);
+	});
+});

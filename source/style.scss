@@ -10,12 +10,8 @@ $color_black: #333333;
 $color_theme_1:#FF4463;
 $color_theme_2:#FF6A6A;
 
-::selection{
-	background-color: #458bc7;
-}
-
-@media screen and (max-width:992px) {
-	*{
+*{
+	@media screen and (max-width:992px) {
 		animation:none!important;
 	}
 }
@@ -25,6 +21,7 @@ html, body{
 	margin: 0;
 	padding: 0;
 	border: none;
+	outline: none;
 	font-family: 'Roboto', sans-serif;
 	color: $color_black;
 	background-color: #F5F5F5;
@@ -82,6 +79,14 @@ a{
 	&:hover{
 		text-decoration: underline;
 	}
+	&:focus, &:active{
+		outline: none;
+		border: none;
+	}
+}
+
+:selection{
+	background-color: #458bc7;
 }
 
 .wrapper{
@@ -696,6 +701,35 @@ a{
 		@media screen and (max-width:992px) {
 			font-size: 1.275rem;
 		}
+	}
+}
+
+.btn-up {
+	display: flex!important;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 18%;
+	right: 3%;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: rgba(0,0,0, 0.4);
+	opacity: 0;
+	transition: all .3s ease-in;
+	z-index: 50;
+	@media screen and (max-width: 992px) {
+		display: none!important;
+	}
+	&:before{
+		content: "";
+		display: block;
+		width: 14px;
+		height: 14px;
+		border-right: 4px solid #ffffff;
+		border-top: 4px solid #ffffff;
+		transform: rotate(-45deg);
+		margin: 6px 0 0 0;
 	}
 }
 

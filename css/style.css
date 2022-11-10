@@ -1,23 +1,18 @@
 @import url("../css/reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-::-moz-selection {
-  background-color: #458bc7;
-}
-::selection {
-  background-color: #458bc7;
-}
-
 @media screen and (max-width: 992px) {
   * {
     -webkit-animation: none !important;
             animation: none !important;
   }
 }
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   border: none;
+  outline: none;
   font-family: "Roboto", sans-serif;
   color: #333333;
   background-color: #F5F5F5;
@@ -81,6 +76,14 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+a:focus, a:active {
+  outline: none;
+  border: none;
+}
+
+:selection {
+  background-color: #458bc7;
 }
 
 .wrapper {
@@ -900,6 +903,45 @@ a:hover {
   .footer p {
     font-size: 1.275rem;
   }
+}
+
+.btn-up {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 18%;
+  right: 3%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  z-index: 50;
+}
+@media screen and (max-width: 992px) {
+  .btn-up {
+    display: none !important;
+  }
+}
+.btn-up:before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-right: 4px solid #ffffff;
+  border-top: 4px solid #ffffff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin: 6px 0 0 0;
 }
 
 @-webkit-keyframes appear {
