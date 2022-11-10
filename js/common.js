@@ -82,7 +82,7 @@ if (animItems.length > 0) {
 
 function showButtonUp() {
 	let btnUp = document.querySelector('.btn-up');
-	if (window.pageYOffset > 1000) {
+	if (window.pageYOffset > 1500) {
 		btnUp.style.opacity = '.7';
 	} else {
 		btnUp.style.opacity = '0';
