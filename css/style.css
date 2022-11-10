@@ -347,7 +347,10 @@ a:focus, a:active {
     transition: left 0.3s ease 0s;
     overflow: auto;
   }
-  .menu__list._active:before {
+  .menu__list._active {
+    left: 0;
+  }
+  .menu__list:before {
     content: "";
     position: fixed;
     width: 100%;
@@ -355,9 +358,6 @@ a:focus, a:active {
     left: 0;
     height: 60px;
     background-color: rgb(251, 119, 117);
-  }
-  .menu__list._active {
-    left: 0;
   }
   .menu__list li {
     margin: 0 0 10px 0;

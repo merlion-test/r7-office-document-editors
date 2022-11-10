@@ -298,7 +298,10 @@ a{
 			padding: 95px 30px 20px;
 			transition: left 0.3s ease 0s;
 			overflow: auto;
-			&._active:before{
+			&._active{
+				left:0;
+			}
+			&:before{
 				content: "";
 				position: fixed;
 				width: 100%;
@@ -306,9 +309,6 @@ a{
 				left: 0;
 				height: 60px;
 				background-color: rgba(251, 119, 117, 1);
-			}
-			&._active{
-				left:0;
 			}
 			& li{
 				margin: 0 0 10px 0;
