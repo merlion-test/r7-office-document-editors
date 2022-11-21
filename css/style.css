@@ -1002,7 +1002,7 @@ a:focus, a:active, a:visited {
   right: 4%;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 25%;
   background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   -webkit-transition: all 0.3s ease-in;
