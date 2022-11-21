@@ -1,33 +1,63 @@
-@import url('../css/reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-// @font-face {
-// 	font-family: 'Roboto';
-// 	font-display: swap;
-// 	src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700');
-// }
+@import url('https://static.lc-group.ru/css/jquery.fancybox.css');
+@import url('https://static.lc-group.ru/css/reset.css');
+
+@font-face {
+	font-family: 'Roboto';
+	font-display: swap;
+	src: url("https://static.lc-group.ru/fonts/Roboto/Roboto-Light.ttf") format("truetype"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Light.woff") format("woff"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Light.eot") format("eot"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Light.svg") format("svg");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	font-display: swap;
+	src: url("https://static.lc-group.ru/fonts/Roboto/Roboto-Regular.ttf") format("truetype"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Regular.woff") format("woff"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Regular.eot") format("eot"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Regular.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	font-display: swap;
+	src: url("https://static.lc-group.ru/fonts/Roboto/Roboto-Medium.ttf") format("truetype"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Medium.woff") format("woff"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Medium.woff2") format("woff2"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Medium.eot") format("eot"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Medium.svg") format("svg");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	font-display: swap;
+	src: url("https://static.lc-group.ru/fonts/Roboto/Roboto-Bold.ttf") format("truetype"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Bold.woff") format("woff"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Bold.eot") format("eot"), url("https://static.lc-group.ru/fonts/Roboto/Roboto-Bold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
+
 $color_white:#ffffff;
 $color_black: #333333;
 $color_theme_1:#FF4463;
 $color_theme_2:#FF6A6A;
+$color_theme_3:#ff9962;
+$color_theme_4:#fa7876;
+$color_background:#F5F5F5;
 
-*{
+*, :before, :after{
+	outline: none;
+	border:none;
 	@media screen and (max-width:992px) {
 		animation:none!important;
 	}
 }
 
 html, body{
-	height:100%;
+	// height:100%;
 	margin: 0;
 	padding: 0;
 	border: none;
 	outline: none;
-	font-family: 'Roboto', sans-serif;
-	color: $color_black;
-	background-color: #F5F5F5;
 }
 
 body{
+	font-family: 'Roboto', sans-serif;
+	color: $color_black;
+	background-color: $color_background;
 	line-height: 1.3;
 	font-size: 1.125rem;
 	font-weight: 400;
@@ -76,16 +106,17 @@ img{
 a{
 	color: $color_theme_1;
 	text-decoration: none;
+	cursor: pointer;
 	&:hover{
 		text-decoration: underline;
 	}
-	&:focus, &:active{
+	&:focus, &:active, &:visited{
 		outline: none;
 		border: none;
 	}
 }
 
-:selection{
+::selection{
 	background-color: #458bc7;
 }
 
@@ -108,14 +139,6 @@ a{
 		max-width: none;
 		padding: 0 20px;
 	}
-}
-
-.title{
-	margin: 0 0 10px 0;
-}
-
-.subtitle{
-	font-size: 1.625rem;
 }
 
 .btn{
@@ -192,11 +215,15 @@ a{
 
 .header{
 	color:$color_white;
-	background: url('../img/background_header.jpg') center / cover no-repeat;
+	background-color: $color_theme_4;
+	background-image: url('https://static.merlion.ru/promo/2022/r7-office-document-editors/background_header.webp');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	overflow: hidden;
 	@media screen and (max-width:992px) {
-		background: rgb(250,119,117);
-		background: linear-gradient(180deg, rgba(250,119,117,1) 0%, rgba(255,153,98,1) 100%);
+		background-color: $color_theme_4;
+		background-image: linear-gradient(180deg, rgba(250,119,117,1) 0%, rgba(255,153,98,1) 100%);
 	}
 	&__container{
 		position: relative;
@@ -211,7 +238,6 @@ a{
 			padding: 10px 0;
 		}
 	}
-
 	&__content{
 		display: flex;
 		justify-content: space-between;
@@ -342,11 +368,11 @@ a{
 			content: "";
 			display: block;
 			position: absolute;
-			background: url("../img/notebook.png") no-repeat;
+			background: url("https://static.merlion.ru/promo/2022/r7-office-document-editors/notebook.webp") no-repeat;
 			width: 630px;
 			height: 630px;
-			top: -50%;
-			right: -17%;
+			top: -35%;
+			right: -16%;
 			z-index: 2;
 			animation: appear 1s ease-out 1.8s both;
 			@media screen and (max-width:1300px){
@@ -365,7 +391,7 @@ a{
 	}
 	&__text{
 		margin: 0 0 30px;
-		max-width: 75%;
+		max-width: 67%;
 		position: relative;
 		@media screen and (max-width:1200px){
 			max-width: 80%;
@@ -388,6 +414,8 @@ a{
 			animation: exit 0.8s ease-out 0.5s both;
 		}
 		p{
+			font-size: 1.25rem;
+			font-weight: 300;
 			position: relative;
 			animation: exit 1s ease-out 0.8s both;
 		}
@@ -400,10 +428,9 @@ a{
 
 
 .features{
-	// margin-top:-70px;
 	position: relative;
-	// animation: appear 0.8s ease 3s both;
 	z-index: 3;
+	margin: -70px 0 0 0;
 	@media screen and (max-width:992px) {
 		margin-top:-70px;
 	}
@@ -437,14 +464,34 @@ a{
 			opacity: 1;
 		}
 		&._active{
-			animation: appear 0.5s ease 0s both, gotop 0.6s ease-out 0s both;
+			// opacity: 0;
+			animation: appear 0.6s ease both, gotop 0.5s ease-out both;
+			// animation: gotop 0.6s ease-out 0s both;
+			&:nth-child(1){
+				animation-delay: 0.3s, 0.3s;
+			}
+			&:nth-child(2){
+				animation-delay: 0.6s, 0.6s;
+			}
+			&:nth-child(3){
+				animation-delay: 0.9s, 0.9s;
+			}
+			&:nth-child(4){
+				animation-delay: 0.3s, 0.3s;
+			}
+			&:nth-child(5){
+				animation-delay: 0.6s, 0.6s;
+			}
+			&:nth-child(6){
+				animation-delay: 0.9s, 0.9s;
+			}
 		}
 	}
 	&__item{
 		display: flex;
 		flex-direction:column;
 		border: 1px solid #DADADA;
-		background-color: #F5F5F5;
+		background-color: $color_background;
 		border-radius: 3px;
 		padding: 70px 50px;
 		margin: 0 0 30px 0;
@@ -511,6 +558,18 @@ a{
 		@media screen and (max-width:992px){
 			margin: 0 0 50px 0;
 		}
+		h2{
+			margin: 0 0 10px 0;
+			@media screen and (max-width:992px){
+				font-size: 1.875rem;
+			}
+		}
+		p{
+			font-size: 1.625rem;
+			@media screen and (max-width:992px){
+				font-size: 1.375rem;
+			}
+		}
 	}
 	&__property{
 		font-weight: 400;
@@ -527,7 +586,7 @@ a{
 
 .text-editor{
 	padding: 80px 0 170px;
-	background: url('../img/background_text-editor.jpg') top / 155% no-repeat;
+	background: url('https://static.merlion.ru/promo/2022/r7-office-document-editors/background_text-editor.webp') top / 155% no-repeat;
 	@media screen and (min-width:992px) {
 		background-size: 125%;
 	}
@@ -544,10 +603,10 @@ a{
 }
 
 .table-editor{
-	background-color: #ff9962;
+	background-color: $color_theme_3;
 	color:$color_white;
 	padding: 80px 0;
-	background-image: url('../img/background_table-editor.jpg');
+	background-image: url('https://static.merlion.ru/promo/2022/r7-office-document-editors/background_table-editor.webp');
 	background-position: top;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -569,7 +628,7 @@ a{
 
 .presentation-editor{
 	padding: 80px 0 170px;
-	background: url('../img/background_presentation-editor.jpg') top / 155% no-repeat;
+	background: url('https://static.merlion.ru/promo/2022/r7-office-document-editors/background_presentation-editor.webp') top / 155% no-repeat;
 	@media screen and (min-width:992px) {
 		background-size: 150%;
 	}
@@ -586,8 +645,8 @@ a{
 }
 
 .server{
-	background-color: #fa7876;
-	background-image: url('../img/background_server.jpg');
+	background-color: $color_theme_4;
+	background-image: url('https://static.merlion.ru/promo/2022/r7-office-document-editors/background_server.webp');
 	background-position: bottom;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -608,7 +667,7 @@ a{
 		background-size: 100%;
 	}
 	@media screen and (max-width:992px) {
-		background-color: #fa7876;
+		background-color: $color_theme_4;
 		background-image: linear-gradient(0deg, rgba(250,120,118,1) 0%, rgba(254,152,98,1) 25%, rgba(250,120,118,1) 50%, rgba(254,152,98,1) 75%, rgba(250,120,118,1) 100%);
 		padding: 60px 0 150px;
 	}
@@ -618,11 +677,13 @@ a{
 	&__title{
 		max-width: 620px;
 		margin: 0 0 70px 0;
+		@media screen and (max-width:992px) {
+			margin: 0 0 50px 0;
+		}
 	}
 	&__row{
 		display: flex;
 		flex-direction: row;
-		// flex-wrap: wrap;
 		justify-content: space-between;
 		margin: 0 -15px;
 		@media screen and (max-width:992px) {
@@ -637,7 +698,6 @@ a{
 		}
 	}
 	&__item{
-		// padding: 0 30px 0 0;
 	}
 	&__name{
 		font-size: 1.565rem;
@@ -674,7 +734,6 @@ a{
 
 }
 .footer{
-	// background: url('../img/background_footer.jpg') right / cover no-repeat;
 	color:$color_white;
 	text-align: center;
 	margin: 0 auto;
@@ -691,6 +750,7 @@ a{
 	span{
 		display: block;
 		font-size: 2.185rem;
+		font-weight: 400;
 		margin: 0 0 5px 0;
 		@media screen and (max-width:992px) {
 			font-size: 1.475rem;
@@ -704,13 +764,13 @@ a{
 	}
 }
 
-.btn-up {
+#toTop {
 	display: flex!important;
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	bottom: 18%;
-	right: 3%;
+	bottom: 15%;
+	right: 4%;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
@@ -731,7 +791,140 @@ a{
 		transform: rotate(-45deg);
 		margin: 6px 0 0 0;
 	}
+	&.show{
+	opacity: 1;
+	visibility: visible;
+	}
 }
+
+#requestForm{
+	display: none;
+	background-color:#F5F5F5;
+	padding: 110px 66px 70px;
+	max-width: 634px;
+	width: 100%;
+	color: #999999;
+	margin: 0 auto;
+}
+
+input.text{
+	height: 36px;
+	width: 100%;
+	border:none;
+	background: none;
+	padding: 0 12px;
+	color: #999999;
+	&::placeholder{
+		color: #999999;
+	}
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.register{
+	max-width: 434px;
+	margin: 0 auto;
+}
+
+.input{
+	max-width: 434px;
+	border-bottom: 1px solid #DADADA;
+	margin: 0 0 40px 0;
+	&:last-child{
+		border:none;
+	}
+}
+
+.field:not(.checkbox-field) {
+	display: none;
+}
+
+.policy-checkbox{
+	display: flex;
+	justify-content: center;
+	align-items: top;
+	margin: 0 0 32px;
+	padding: 12px 0 0 0;
+	.checkbox-field{
+		display: inline-block;
+		input[type="checkbox"]{
+			display: none;
+		}
+		#policyCheckbox+label{
+			display: inline-block;
+			position: relative;
+			width: 20px;
+			height: 20px;
+			background: none;
+			border: solid 1px #DADADA;
+			background-color: #ffffff;
+			cursor: pointer;
+			margin: 0 10px 0 0;
+		}
+		#policyCheckbox:checked+label::before {
+			content: '\2713';
+			position: relative;
+			bottom: 2px;
+			left:2px;
+			color: #a6a6a6;
+		}
+	}
+}
+
+.sendbutton{
+	display: block;
+	max-width: 194px;
+	padding: 18px 65px;
+	margin: 0 auto;
+	color:#ffffff;
+	border-radius: 3px;
+}
+
+.fancybox-slide{
+	&:before{
+		content:'';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 50%;
+		transform: translate(-50%, 0);
+		width:273px;
+		height:898px;
+		background-image: linear-gradient(0deg, rgba(254,152,98,1) 0%, rgba(250,120,118,1) 100%);
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+}
+
+.fancybox-slide--html{
+	padding: 70px 6px 0;
+	@media (max-width: 768px) {
+		padding: 6px;
+	}
+}
+
+.fancybox-slide--html .fancybox-close-small{
+	top:30px;
+	right:30px;
+	outline: none;
+	border:none;
+}
+.fancybox-slide--html .fancybox-close-small svg{
+	transform: scale(2.5);
+	color: #DADADA;
+
+}
+
+.fancybox-active{
+	// overflow: hidden;
+}
+
 
 @keyframes appear{
 	0%{
@@ -753,9 +946,9 @@ a{
 
 @keyframes gotop{
 	0%{
-		transform: translate(0, 0);
+		transform: translate(0, 150px);
 	}
 	100%{
-		transform: translate(0, -70px);
+		transform: translate(0, 0);
 	}
 }
