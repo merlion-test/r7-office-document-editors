@@ -1039,6 +1039,16 @@ a:focus, a:active, a:visited {
   color: #999999;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  #requestForm {
+    padding: 110px 50px 70px;
+  }
+}
+@media (max-width: 480px) {
+  #requestForm {
+    padding: 110px 25px 70px;
+  }
+}
 
 input.text {
   height: 36px;
@@ -1102,6 +1112,12 @@ input::-webkit-inner-spin-button {
           align-items: top;
   margin: 0 0 32px;
   padding: 12px 0 0 0;
+}
+@media (max-width: 480px) {
+  .policy-checkbox {
+    padding: 0;
+    margin: 0;
+  }
 }
 .policy-checkbox .checkbox-field {
   display: inline-block;
