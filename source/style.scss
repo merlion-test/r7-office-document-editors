@@ -892,6 +892,20 @@ input[type="number"]{
 	}
 }
 
+.hero-form{
+	padding: 20px 0 0;
+	text-align: center;
+	p{
+		color:$color_black;
+	}
+	.inps{
+		color: $color_theme_1;
+		.post_ramka, .post_ramka p{
+			color:$color_black;
+		}
+	}
+}
+
 .sendbutton{
 	display: block;
 	max-width: 194px;
@@ -938,7 +952,7 @@ input[type="number"]{
 }
 
 .fancybox-content{
-	cursor: initial;!important;
+	cursor: initial!important;
 }
 
 

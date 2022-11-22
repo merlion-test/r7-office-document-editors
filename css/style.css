@@ -1002,7 +1002,7 @@ a:focus, a:active, a:visited {
   right: 4%;
   width: 60px;
   height: 60px;
-  border-radius: 25%;
+  border-radius: 30%;
   background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   -webkit-transition: all 0.3s ease-in;
@@ -1149,6 +1149,20 @@ input[type=number]:hover, input[type=number]:focus {
   bottom: 2px;
   left: 2px;
   color: #a6a6a6;
+}
+
+.hero-form {
+  padding: 20px 0 0;
+  text-align: center;
+}
+.hero-form p {
+  color: #333333;
+}
+.hero-form .inps {
+  color: #FF4463;
+}
+.hero-form .inps .post_ramka, .hero-form .inps .post_ramka p {
+  color: #333333;
 }
 
 .sendbutton {

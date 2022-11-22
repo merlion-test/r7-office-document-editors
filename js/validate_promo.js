@@ -5,7 +5,7 @@ function Validator() {
 		nothing: "Не выбрано значение поля",
 		short: "Текст слишком короткий",
 		email: "Некорректный email",
-		policy: "Нет согласия с политикой",
+		policy: "Нет согласия с политикой обработки данных",
 		phone: "Некорректный телефон"
 	};
 	this.validate = function() {
@@ -35,7 +35,7 @@ $(document).ready(function() {
 		
         evt.preventDefault();
         
-		$(this).parents('form.former').find('input.validate-me,  select.validate-me, textarea.validate-me').filter(function() {
+		$(this).parents('form.former').find('input.validate-me,  select.validate-me, textarea.validate-me, #policyCheckbox').filter(function() {
 			return ['hidden', 'submit'].indexOf($(this).attr('type')) < 0
 		}).each(function(i, e) {
 			var
@@ -53,7 +53,6 @@ $(document).ready(function() {
 			if ((!_value.trim() || _value == 'не выбрано') && $(e).hasClass('validate-me')) {
 				validator.valid = false
 				$(e).addClass('error')
-				$('.fill-form').css('display', 'block')
                 //console.log('error xxx');
 			}
 			if (name == 'policy') {
@@ -61,7 +60,9 @@ $(document).ready(function() {
 					error_msg.push(validator.messages.policy);
 					validator.valid = false;
 					//console.log('invalid policy')
-					$(e).addClass('error')
+					$(e).addClass('error');
+					$(e).parent().parent('.policy-checkbox').add('error');
+					$('.inps').css('margin', '15px auto 0 auto').css('color', '#fff');
 				} else {
 				    //console.log('valid policy')
 				}
@@ -71,7 +72,8 @@ $(document).ready(function() {
 					error_msg.push(validator.messages.short);
 					validator.valid = false;
 					// console.log('invalid name')
-					$(e).addClass('error')
+					$(e).addClass('error');
+
 				}
 			}
 			if (name == 'email') {
@@ -122,8 +124,6 @@ $(document).ready(function() {
 		})
         
 		if (validator.valid) {
-			$('.fill-form').css('display', 'none');
-
             var fd = new FormData;
             var post_data = [];
             
@@ -136,19 +136,18 @@ $(document).ready(function() {
                fd.append('form_id', formId);
             
             $('.send-text-after').remove();
-            $(this).parents('form.former').parent('div').append('<div class="send-text-after"></div>');
-			$(this).parents('form.former').css('display', 'none');
+            $(this).parents('form.former').append('<div class="send-text-after"></div>');
             
-			$(this).parents('form.former').find('input[type="text"],input[type="hidden"],textarea').each(function() {
+			$('input[type="text"],input[type="hidden"],textarea').each(function() {
                 fd.append($(this).prop('name'), $(this).val());
 			});
-			$(this).parents('form.former').find('input[type="radio"]:checked').each(function() {
+			$('input[type="radio"]:checked').each(function() {
                 fd.append($(this).prop('name'), $(this).val());
 			});
-			$(this).parents('form.former').find('input[type="file"]').each(function() {
+			$('input[type="file"]').each(function() {
                 fd.append($(this).prop('name'), $(this).prop('files')[0]);
 			});
-			$(this).parents('form.former').find('input[type="checkbox"]:checked').each(function() {
+			$('input[type="checkbox"]:checked').each(function() {
 			     if(post_data[$(this).prop('name')]!==undefined){
 			     	post_data[$(this).prop('name')] += $(this).val()+' '
                 }else{
@@ -159,14 +158,14 @@ $(document).ready(function() {
             for(var index in post_data) { 
                 fd.append(index, post_data[index]);
             }
-			$(this).parents('form.former').find('select option:selected').each(function() {
+			$('select option:selected').each(function() {
                  fd.append($(this).parent('select').prop('name'), $(this).text());
 			});
             fd.append('host', window.location.host);
 
             var url =
 							(window.location.host !== 'promo.merlion.com' && window.location.host !== 'promo-dev.merlion.com') ?
-								'https://event.merlion.com/2021/project_library/ajax/post_2.php' :
+								'https://event.merlion.com/ajax/post_2.php' :
 								'/ajax/post_2.php';
 
 			$.ajax({
@@ -182,9 +181,13 @@ $(document).ready(function() {
 			         $('.hero-form .overflow .inps').append('Извините, заявка не отправлена');
 			     }else{
 			         if ($('.hero-form .overflow .inps').length>0) {
-    			         	$('.hero-form .overflow .inps').html(data);	
+    			         	$('.hero-form .overflow .inps').html(data);
+    			         	$('.register, #requestForm h2, #requestForm h2+p').hide();
+
 			         } else {
  			            $('.send-text-after').html(data);
+								 $('.register, #requestForm h2, #requestForm h2+p\'').hide();
+
 			         }
                      $('#thisFormId').trigger('click');
                      $(this).parents('form.former').addClass('sentForm')
